@@ -64,9 +64,9 @@ def main():
             print 'Closing...'
             break
         elif key == ord('s'):   # save
-            cv2.imwrite('opticalfb.png',frame)
-            cv2.imwrite('opticalhsv.png',img)
-            print "Saved raw frame as 'opticalfb.png' and displayed as 'opticalhsv.png'"
+            cv2.imwrite('img_raw.png',frame)
+            cv2.imwrite('img_w_flow.png',img)
+            print "Saved raw frame as 'img_raw.png' and displayed as 'img_w_flow.png'"
         elif ord('1') <= key and key <= ord('4'):
             of = change(key, frame)
 
