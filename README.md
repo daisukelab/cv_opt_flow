@@ -35,28 +35,35 @@ Features:
 - OpenCV3 3.1.0
 
 ## Running this sample
-Simply run main.py.
+For Mac/PC, simply run main.py.
 
-       $ python main.py
+    $ python main.py
 
-       Hit followings to switch to:
-       1 - Dense optical flow by HSV color image (default);
-       2 - Dense optical flow by lines;
-       3 - Dense optical flow by warped image;
-       4 - Lucas-Kande method.
+For Raspberry Pi, run raspi_main.py.
 
-       Hit 's' to save image.
+    $ python raspi_main.py
 
-       Hit 'f' to flip image horizontally.
+Usage will be shown as below.
 
-       Hit ESC to exit.
+    Hit followings to switch to:
+    1 - Dense optical flow by HSV color image (default);
+    2 - Dense optical flow by lines;
+    3 - Dense optical flow by warped image;
+    4 - Lucas-Kande method.
 
-* Click on the preview window to enter commands.
+    Hit 's' to save image.
+
+    Hit 'f' to flip image horizontally.
+
+    Hit ESC to exit.
+
+* For Mac/PC, click on the preview window to enter commands.
 
 ## About code
 | file | description |
 |------|-------------|
 |main.py|Main to run this sample.|
+|raspi_main.py|Main for Raspberry Pi.|
 |OpticalFlowShowcase.py|Optical flow sample body.|
 
 OpticalFlowShowcase.py has following classes.
