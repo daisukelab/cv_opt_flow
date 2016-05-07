@@ -10,6 +10,7 @@ Features:
 - Not accumulating 'flow' for easy understanding. 
 - Flipping video image horizontally for the use with webcam.
 - Summarized code for each methods.
+- (new) Raspberry Pi support.
 
 ## Example
 
@@ -30,9 +31,16 @@ Features:
 ![Lucas-Kande](https://github.com/daisukelab/cv_opt_flow/blob/master/sample_result/lk.png "Lucas-Kande")
 
 ## Tested Environment
+(Mac)
 - MacOS X El Capitan
 - python 2.7.10
 - OpenCV3 3.1.0
+
+(Raspberry Pi)
+- Raspberry Pi 2
+- Ubuntu 14.04.4 LTS (trusty)
+- python 2.7.6
+- OpenCV3 3.0.0
 
 ## Running this sample
 For Mac/PC, simply run main.py.
