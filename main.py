@@ -16,6 +16,8 @@ Hit followings to switch to:
 
 Hit 's' to save image.
 
+Hit 'f' to flip image horizontally.
+
 Hit ESC to exit.
 '''
 
@@ -35,11 +37,12 @@ def main():
     
     def capture(vc):
         rval, frame = vc.read()
-        if rval:
+        if rval and flipImage:
             frame = cv2.flip(frame, 1)
-            return (rval, frame)
+        return (rval, frame)
         
     ## main starts here
+    flipImage = True
     vc = cv2.VideoCapture(0)
     if not vc.isOpened():
         exit -1
@@ -51,6 +54,7 @@ def main():
     if rval:
         of = change('1', frame)
 
+    ### main work
     while rval:
         rval, frame = capture(vc)
 
@@ -67,6 +71,9 @@ def main():
             cv2.imwrite('img_raw.png',frame)
             cv2.imwrite('img_w_flow.png',img)
             print "Saved raw frame as 'img_raw.png' and displayed as 'img_w_flow.png'"
+        elif key == ord('f'):   # save
+            flipImage = not flipImage
+            print "Flip image: " + {True:"ON", False:"OFF"}.get(flipImage)
         elif ord('1') <= key and key <= ord('4'):
             of = change(key, frame)
 

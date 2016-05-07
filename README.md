@@ -8,7 +8,7 @@ This is better version of 'samples/python2/opt_flow.py' included in OpenCV.
 Features:
 - Switchable to 4 type of optical flow methods.
 - Not accumulating 'flow' for easy understanding. 
-- Flipping video image horizontally for easy understanding.
+- Flipping video image horizontally for the use with webcam.
 - Summarized code for each methods.
 
 ## Example
@@ -30,9 +30,9 @@ Features:
 ![Lucas-Kande](https://github.com/daisukelab/cv_opt_flow/blob/master/sample_result/lk.png "Lucas-Kande")
 
 ## Tested Environment
-MacOS X El Capitan
-python 2.7.10
-OpenCV3 3.1.0
+- MacOS X El Capitan
+- python 2.7.10
+- OpenCV3 3.1.0
 
 ## Running this sample
 Simply run main.py.
@@ -46,6 +46,8 @@ Simply run main.py.
        4 - Lucas-Kande method.
 
        Hit 's' to save image.
+
+       Hit 'f' to flip image horizontally.
 
        Hit ESC to exit.
 
