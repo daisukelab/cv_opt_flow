@@ -17,7 +17,7 @@ Hit followings to switch to:
 1 - Dense optical flow by HSV color image (default);
 2 - Dense optical flow by lines;
 3 - Dense optical flow by warped image;
-4 - Lucas-Kande method.
+4 - Lucas-Kanade method.
 
 Hit 's' to save image.
 
@@ -33,7 +33,7 @@ def main():
             ord('1'): ('==> Dense_by_hsv', 'dense_hsv'),
             ord('2'): ('==> Dense_by_lines', 'dense_lines'),
             ord('3'): ('==> Dense_by_warp', 'dense_warp'),
-            ord('4'): ('==> Lucas-Kande', 'lucas_kande')
+            ord('4'): ('==> Lucas-Kanade', 'lucas_kanade')
         }.get(key, ('==> Dense_by_hsv', 'dense_hsv'))
         print message
         of = CreateOpticalFlow(type)

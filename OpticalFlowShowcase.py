@@ -5,7 +5,7 @@
 
 ## class diagram
 # http://www.yuml.me/diagram/scruffy/class/draw
-# [IOpticalFlow]^[DenseOpticalFlow],[IOpticalFlow]^[LucasKandeOpticalFlow], [DenseOpticalFlow]^[DenseOpticalFlowByHSV],[DenseOpticalFlow]^[DenseOpticalFlowByLines],[DenseOpticalFlow]^[DenseOpticalFlowByWarp]
+# [IOpticalFlow]^[DenseOpticalFlow],[IOpticalFlow]^[LucasKanadeOpticalFlow], [DenseOpticalFlow]^[DenseOpticalFlowByHSV],[DenseOpticalFlow]^[DenseOpticalFlowByLines],[DenseOpticalFlow]^[DenseOpticalFlowByWarp]
 
 import numpy as np
 import cv2
@@ -74,7 +74,7 @@ class DenseOpticalFlowByWarp(DenseOpticalFlow):
         flow[:,:,1] += np.arange(h)[:,np.newaxis]
         return cv2.remap(grayFrame, flow, None, cv2.INTER_LINEAR)
 
-class LucasKandeOpticalFlow(IOpticalFlow):
+class LucasKanadeOpticalFlow(IOpticalFlow):
     def __init__(self):
         # params for ShiTomasi corner detection
         self.feature_params = dict( maxCorners = 100,
@@ -130,12 +130,12 @@ def CreateOpticalFlow(type):
         return DenseOpticalFlowByLines()
     def dense_by_warp():
         return DenseOpticalFlowByWarp()
-    def lucas_kande():
-        return LucasKandeOpticalFlow()
+    def lucas_kanade():
+        return LucasKanadeOpticalFlow()
     return {
         'dense_hsv': dense_by_hsv,
         'dense_lines': dense_by_lines,
         'dense_warp': dense_by_warp,
-        'lucas_kande': lucas_kande
+        'lucas_kanade': lucas_kanade
     }.get(type, dense_by_lines)()
     

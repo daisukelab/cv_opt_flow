@@ -26,9 +26,9 @@ Features:
 
 ![WARP](https://github.com/daisukelab/cv_opt_flow/blob/master/sample_result/warp.png "WARP") ![WARP SRC](https://github.com/daisukelab/cv_opt_flow/blob/master/sample_result/warp_src.png "WARP Source")
 
-- Lucas-Kande method
+- Lucas-Kanade method
 
-![Lucas-Kande](https://github.com/daisukelab/cv_opt_flow/blob/master/sample_result/lk.png "Lucas-Kande")
+![Lucas-Kanade](https://github.com/daisukelab/cv_opt_flow/blob/master/sample_result/lk.png "Lucas-Kanade")
 
 ## Tested Environment
 (Mac)
@@ -57,7 +57,7 @@ Usage will be shown as below.
     1 - Dense optical flow by HSV color image (default);
     2 - Dense optical flow by lines;
     3 - Dense optical flow by warped image;
-    4 - Lucas-Kande method.
+    4 - Lucas-Kanade method.
 
     Hit 's' to save image.
 
