@@ -4,6 +4,7 @@
 # - http://stackoverflow.com/questions/2601194/displaying-a-webcam-feed-using-opencv-and-python
 # - http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_gui/py_video_display/py_video_display.html
 
+from __future__ import print_function
 import cv2
 from OpticalFlowShowcase import *
 
@@ -30,7 +31,7 @@ def main():
             ord('3'): ('==> Dense_by_warp', 'dense_warp'),
             ord('4'): ('==> Lucas-Kanade', 'lucas_kanade')
         }.get(key, ('==> Dense_by_hsv', 'dense_hsv'))
-        print message
+        print(message)
         of = CreateOpticalFlow(type)
         of.set1stFrame(prevFrame)
         return of
@@ -65,15 +66,15 @@ def main():
         ### key operation
         key = cv2.waitKey(1)
         if key == 27:         # exit on ESC
-            print 'Closing...'
+            print('Closing...')
             break
         elif key == ord('s'):   # save
             cv2.imwrite('img_raw.png',frame)
             cv2.imwrite('img_w_flow.png',img)
-            print "Saved raw frame as 'img_raw.png' and displayed as 'img_w_flow.png'"
+            print("Saved raw frame as 'img_raw.png' and displayed as 'img_w_flow.png'")
         elif key == ord('f'):   # save
             flipImage = not flipImage
-            print "Flip image: " + {True:"ON", False:"OFF"}.get(flipImage)
+            print("Flip image: " + {True:"ON", False:"OFF"}.get(flipImage))
         elif ord('1') <= key and key <= ord('4'):
             of = change(key, frame)
 
@@ -83,5 +84,5 @@ def main():
 
 
 if __name__ == '__main__':
-    print usage_text
+    print(usage_text)
     main()

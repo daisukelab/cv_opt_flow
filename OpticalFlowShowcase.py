@@ -56,7 +56,7 @@ class DenseOpticalFlowByLines(DenseOpticalFlow):
 
     def makeResult(self, grayFrame, flow):
         h, w = grayFrame.shape[:2]
-        y, x = np.mgrid[self.step/2:h:self.step, self.step/2:w:self.step].reshape(2,-1)
+        y, x = np.mgrid[self.step//2:h:self.step, self.step//2:w:self.step].reshape(2,-1)
         fx, fy = flow[y,x].T
         lines = np.vstack([x, y, x+fx, y+fy]).T.reshape(-1, 2, 2)
         lines = np.int32(lines + 0.5)

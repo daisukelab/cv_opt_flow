@@ -2,15 +2,16 @@ OpenCV OpticalFlow Showcase
 ===========================
 
 ## About
-This is sample code for trying methods of computer vision called [Optical Flow](https://en.wikipedia.org/wiki/Optical_flow) casually with [OpenCV](http://opencv.org).
 
-This is better version of 'samples/python2/opt_flow.py' included in OpenCV.
-Features:
-- Switchable to 4 type of optical flow methods.
-- Not accumulating 'flow' for easy understanding. 
-- Flipping video image horizontally for the use with webcam.
-- Summarized code for each methods.
-- (new) Raspberry Pi support.
+This is a sample code of [Optical Flow](https://en.wikipedia.org/wiki/Optical_flow) casually with [OpenCV](http://opencv.org).
+
+This is better version of 'samples/python2/opt_flow.py' included in OpenCV:
+
+- Switchable to 4 types of optical flow methods,
+- Not accumulating 'flow' for making it easy,
+- Flipping video image horizontally for the use with webcam,
+- Packing each methods into classes,
+- Also runs on Raspberry Pi.
 
 ## Example
 
@@ -33,8 +34,8 @@ Features:
 ## Tested Environment
 (Mac)
 - MacOS X El Capitan
-- python 2.7.10
-- OpenCV3 3.1.0
+- python 2.7.10 & 3.6.2
+- OpenCV3 3.1.0 & 3.4.1
 
 (Raspberry Pi)
 - Raspberry Pi 2
@@ -70,8 +71,8 @@ Usage will be shown as below.
 ## About code
 | file | description |
 |------|-------------|
-|main.py|Main to run this sample.|
-|raspi_main.py|Main for Raspberry Pi.|
+|main.py|Main program to run this sample.|
+|raspi_main.py|Main program for Raspberry Pi.|
 |OpticalFlowShowcase.py|Optical flow sample body.|
 
 OpticalFlowShowcase.py has following classes.
